@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 呼叫 Render 上的 /work-reminder 路由
-        run: curl -X GET https://work-reminder-bot.onrender.com/work-reminder
+        run: curl -X GET https://work-report-reminder.onrender.com/work-reminder
