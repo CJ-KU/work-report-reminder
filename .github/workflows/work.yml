@@ -2,7 +2,7 @@ name: Render LINE Bot 每日下班提醒
 
 on:
   schedule:
-    - cron: '45 9 * * 1-5'  # 每週一至週五台灣時間 17:45（UTC 時區為 +0）
+    - cron: '20 9 * * 1-5'  # 每週一至週五台灣時間 17:20（UTC 時區為 +0）
   workflow_dispatch:
 
 jobs:
