@@ -1,13 +1,13 @@
-name: 每日下班提醒推播
+name: Render LINE Bot 每日下班提醒
 
 on:
   schedule:
-    - cron: '45 9 * * 1-5'  # 每週一至週五，台灣時間 17:45（UTC 09:45）
+    - cron: '45 9 * * 1-5'  # 每週一至週五台灣時間 17:45（UTC 時區為 +0）
   workflow_dispatch:
 
 jobs:
-  send_line_reminder:
+  send_reminder:
     runs-on: ubuntu-latest
     steps:
-      - name: 呼叫 Render 上的 LINE Bot /work-reminder
-        run: curl -X GET https://your-render-app-name.onrender.com/work-reminder
+      - name: 呼叫 Render 上的 /work-reminder 路由
+        run: curl -X GET https://work-reminder-bot.onrender.com/work-reminder
