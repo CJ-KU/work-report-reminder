@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
-LINE_TOKEN = os.getenv("LINE_TOKEN")
-GROUP_ID = os.getenv("GROUP_ID")
+LINE_TOKEN = os.getenv("Wuv7cd8MlTWuUs/9QZu9VWR5hnMwk5egvpwMnvNnMhazc8gX6APFiP0bBbjnPciYVOApuwo6wx8JR93AvGiZ84J4eqDcbCmFZe+ZqlpI5I3+xCi0C9TqAh4dRwPc2bw1opG9yVWQ3Gs+msyAutDmjwdB04t89/1O/w1cDnyilFU=")
+GROUP_ID = os.getenv("C50ffb105dd8c8aaf56e3c746e516100e")
 
 def send_message(text):
     url = 'https://api.line.me/v2/bot/message/push'
