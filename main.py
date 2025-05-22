@@ -19,8 +19,12 @@ def send_message(text):
         'to': GROUP_ID,
         'messages': [{'type': 'text', 'text': text}]
     }
-    res = requests.post(url, headers=headers, json=payload)
-    print("發送結果：", res.status_code, res.text)
+    try:
+        res = requests.post(url, headers=headers, json=payload)
+        print("發送結果：", res.status_code, res.text)
+    except Exception as e:
+        print("❌ 發送失敗：", e)
+
 
 @app.route("/")
 def index():
